@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound.jsx";
 import ProtectedRoute from "./routes/ProtectedRoutes.jsx";
 import Register from "./pages/Auth/Register.jsx";
 import {ToastContainer} from "react-toastify";
+import AllVehicles from "./pages/Vehicles/AllVehicles.jsx";
 
 function App() {
   return (
@@ -62,6 +63,14 @@ function App() {
                 <AddVehicle />
               </ProtectedRoute>
             }
+          />
+          <Route
+          path = "/all-vehicles"
+          element={
+            <ProtectedRoute>
+              <AllVehicles/>
+            </ProtectedRoute>
+          }
           />
 
           {/* Catch All */}

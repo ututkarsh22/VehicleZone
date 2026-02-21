@@ -1,6 +1,6 @@
 import React from "react";
 import DashboardLayout from "../../layouts/DashboardLayout";
-import { useContext } from "react";
+// import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { vehicleApi } from "../../api/vehicleApi";
 import { useState, useEffect } from "react";
@@ -102,8 +102,8 @@ export default function Dashboard() {
           
           <div className="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
             <div className="p-6 border-b border-gray-100 flex justify-between items-center">
-              <h2 className="text-lg font-bold text-gray-800">Recent Bookings</h2>
-              <button className="text-blue-600 text-sm hover:underline">View All</button>
+              <h2 className="text-lg font-bold text-gray-800">Your Cars</h2>
+              <Link className="text-blue-600 text-sm hover:underline" to="/all-vehicles">View All</Link>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
